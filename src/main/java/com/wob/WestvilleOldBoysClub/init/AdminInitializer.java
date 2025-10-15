@@ -18,7 +18,7 @@ public class AdminInitializer implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         createAdminIfNotExists("admin@example.com", "Admin User", "Admin@123");
         createAdminIfNotExists("johndoe@wob.com", "John Doe", "#John@123");
     }
