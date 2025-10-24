@@ -3,12 +3,10 @@ package com.wob.WestvilleOldBoysClub.controller;
 import com.wob.WestvilleOldBoysClub.model.Admin;
 import com.wob.WestvilleOldBoysClub.service.AdminService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin(origins = "https://localhost:7223")
 @RequestMapping("/admin/api/v1")
 public class AdminController {
 
