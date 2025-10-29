@@ -18,8 +18,8 @@ public class HomeController {
                 "\n" +
                 "    <!-- Header -->\n" +
                 "    <header style=\"background-color: #0d6efd; color: white; padding: 20px; text-align: center;\">\n" +
-                "        <h1>Welcome to the Payment System</h1>\n" +
-                "        <p>Fast, Secure, and Reliable Transactions</p>\n" +
+                "        <h1>Welcome to Westville Old Boys Club</h1>\n" +
+                "        <p></p>\n" +
                 "    </header>\n" +
                 "\n" +
                 "    <!-- Navigation -->\n" +
