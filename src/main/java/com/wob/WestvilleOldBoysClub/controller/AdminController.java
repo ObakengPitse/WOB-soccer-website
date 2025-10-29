@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "https://work-integrated-app-amg6fcezacbvgyg0.southafricanorth-01.azurewebsites.net")
 @RequestMapping("/admin/api/v1")
 public class AdminController {
 
