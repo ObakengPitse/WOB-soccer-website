@@ -19,14 +19,15 @@ public class AdminInitializer implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        createAdminIfNotExists("admin@example.com", "Admin User", "Admin@123");
-        createAdminIfNotExists("johndoe@wob.com", "John Doe", "#John@123");
+        createAdminIfNotExists("admin@example.com", "Admin User", "Admin@123","01122334455");
+        createAdminIfNotExists("johndoe@wob.com", "John Doe", "#John@123", "0123456789");
     }
 
-    private void createAdminIfNotExists(String email, String name, String rawPassword) {
+    private void createAdminIfNotExists(String email, String name, String rawPassword, String phone) {
         if (adminRepository.findByEmailAddress(email).isEmpty()) {
             Admin admin = new Admin();
             admin.setEmailAddress(email);
+            admin.setPhone(phone);
             admin.setFullName(name);
             admin.setRole("Admin");
             admin.setPassword(passwordEncoder.encode(rawPassword));

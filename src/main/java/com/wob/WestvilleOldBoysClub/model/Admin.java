@@ -14,16 +14,18 @@ public class Admin {
     private String emailAddress;
     private String password;
     private String role;
+    private String phone;
 
     public Admin() {
     }
 
-    public Admin(Long id, String fullName, String emailAddress, String password, String role) {
+    public Admin(Long id, String fullName, String emailAddress, String password, String role, String phone) {
         this.id = id;
         this.fullName = fullName;
         this.emailAddress = emailAddress;
         this.password = password;
         this.role = role;
+        this.phone = phone;
     }
 
     public Long getId() {
@@ -64,5 +66,13 @@ public class Admin {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }
