@@ -6,7 +6,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@CrossOrigin(origins = "https://work-integrated-app-amg6fcezacbvgyg0.southafricanorth-01.azurewebsites.net")
+@CrossOrigin(origins = {
+        "https://work-integrated-app-amg6fcezacbvgyg0.southafricanorth-01.azurewebsites.net",
+        "https://localhost:7223"
+})
 @RequestMapping("/user/api/v1")
 public class UserController {
 

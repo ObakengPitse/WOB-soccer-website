@@ -21,10 +21,10 @@ public class SecurityConfig {
                         .requestMatchers("/auth/**").permitAll()
                         .requestMatchers( "/admin/**").permitAll()
                         .requestMatchers( "/user/**").permitAll()
+                        .requestMatchers( "/food/**").permitAll()
+                        .requestMatchers( "/orders/**").permitAll()
                         .anyRequest().authenticated()
                 );
-
-
         return http.build();
     }
 
