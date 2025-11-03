@@ -3,6 +3,8 @@ package com.wob.WestvilleOldBoysClub.controller;
 import com.wob.WestvilleOldBoysClub.dto.OrderDTO;
 import com.wob.WestvilleOldBoysClub.model.Order;
 import com.wob.WestvilleOldBoysClub.service.OrderService;
+import org.aspectj.weaver.ast.Or;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -34,6 +36,11 @@ public class OrderController {
     @PostMapping("/get-all-by-email")
     public List<Order> getOrdersByEmail(@RequestBody Order order) {
         return orderService.getOrdersByEmail(order);
+    }
+
+    @PostMapping("/update-status")
+    public ResponseEntity<Order> updateOrderStatus(@RequestBody Order order) {
+        return orderService.updateOrder(order);
     }
 
     @PostMapping("/get-order-by-id")
