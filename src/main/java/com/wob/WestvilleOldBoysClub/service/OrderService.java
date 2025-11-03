@@ -26,6 +26,7 @@ public class OrderService {
         order.setPhone(dto.getPhone());
         order.setPaymentMethod(dto.getPaymentMethod());
         order.setTotal(dto.getTotal());
+        order.setStatus(dto.getStatus());
 
         List<OrderItem> items = new ArrayList<>();
         for(OrderItem item: dto.getItems()) {
@@ -41,6 +42,10 @@ public class OrderService {
 
     public List<Order> getAllOrders() {
         return orderRepository.findAll();
+    }
+
+    public List<Order> getOrdersByEmail(Order order) {
+        return orderRepository.findByEmail(order.getEmail());
     }
 
     public Order getOrderById(Order order) {

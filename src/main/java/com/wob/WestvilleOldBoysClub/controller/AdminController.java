@@ -24,6 +24,11 @@ public class AdminController {
         return adminService.getAllAdmins();
     }
 
+    @PostMapping("/get-all-by-role")
+    public ResponseEntity<?> getAllByRole(@RequestBody Admin admin) {
+        return adminService.findByRole(admin);
+    }
+
     @PostMapping("/create-admin")
     public  ResponseEntity<?> createAdmin(@RequestBody Admin admin) {
         return adminService.createAdmin(admin);

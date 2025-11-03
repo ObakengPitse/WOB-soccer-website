@@ -31,6 +31,11 @@ public class OrderController {
         return orderService.getAllOrders();
     }
 
+    @PostMapping("/get-all-by-email")
+    public List<Order> getOrdersByEmail(@RequestBody Order order) {
+        return orderService.getOrdersByEmail(order);
+    }
+
     @PostMapping("/get-order-by-id")
     public Order getOrder(@RequestBody Order order) {
         return orderService.getOrderById(order);

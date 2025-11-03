@@ -12,6 +12,7 @@ public class OrderDTO {
     private String paymentMethod;
     private Double total;
     private LocalDateTime createdAt;
+    private String status;
     List<OrderItem> items;
 
     public String getFullName() {
@@ -68,5 +69,13 @@ public class OrderDTO {
 
     public void setItems(List<OrderItem> items) {
         this.items = items;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

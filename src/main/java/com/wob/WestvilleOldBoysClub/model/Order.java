@@ -18,6 +18,7 @@ public class Order {
     private String paymentMethod;
     private Double total;
     private LocalDateTime createdAt;
+    private String status;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<OrderItem> items;
@@ -47,6 +48,14 @@ public class Order {
 
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
     public List<OrderItem> getItems() { return items; }
     public void setItems(List<OrderItem> items) {

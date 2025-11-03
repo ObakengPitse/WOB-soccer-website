@@ -33,7 +33,11 @@ public class AdminService {
             if (existingEmail.isPresent()) {
                 return ResponseEntity.badRequest().body("Admin with same Email Address already exists!");
             }
-            admin.setRole("Admin");
+            if(admin.getRole() != null){
+                admin.setRole(admin.getRole());
+            } else {
+                admin.setRole("Admin");
+            }
             adminRepository.save(admin);
 
             return ResponseEntity.ok("Admin added Successfully!");
@@ -75,5 +79,9 @@ public class AdminService {
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Admin not found");
         }
+    }
+
+    public ResponseEntity<?> findByRole(Admin admin) {
+        return ResponseEntity.ok(adminRepository.findByRole(admin.getRole()));
     }
 }
